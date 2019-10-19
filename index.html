@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8"/>
+        <title>WoCo Explorer</title>
+        <!-- JQuery resource -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Bootstrap resources -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- D3 resources -->
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+
+        <!-- Local resources -->
+        <script src="javascript/javascript.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h1>Visualize cooccurrences for a group of words</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        <label for="input_string">Enter multiple words separated by spaces:</label>
+                        <input type="text" class="form-control" id="input_string">
+                    </div>
+                    <div>
+                        <div class="checkbox">
+                            <label class="checkbox-inline">
+                                <input id="lemma" type="checkbox" checked="checked" value="">Lemmatized Input
+                            </label>
+
+                            <label class="checkbox-inline">
+                                <input id="stopwords" type="checkbox" checked="checked" value="">Exclude Stopwords
+                            </label>
+                        </div>
+                        <div class="dropdown">
+                            <button id="language" class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">German<span class="caret"></span></button>
+                            <ul id="language_selection" class="dropdown-menu">
+                                <li><a href="#">German</a></li>
+                                <li><a href="#">English</a></li>
+                                <li><a href="#">French</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="submit_words"><span id="loading" style="display:none" class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Visualize</button>
+                </div>
+                <div class="col-sm-8">
+                    <p id="result"></p>
+                    <p id="cooccurrences"></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
