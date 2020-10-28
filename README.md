@@ -11,4 +11,5 @@ The web application is no longer running.
 
 ![WoCo Preview](docs/screenshot_woco_website.png)
 
-![WoCo Preview](docs/example_view.png)
+![WoCo Preview](docs/example_view_context.png)
+
